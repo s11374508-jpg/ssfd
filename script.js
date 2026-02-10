@@ -132,12 +132,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Parallax effect for hero section
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const heroContent = document.querySelector('.hero-content');
+
     window.addEventListener('scroll', () => {
-        const hero = document.querySelector('.hero');
         const scrolled = window.scrollY;
 
-        if (hero && scrolled < hero.offsetHeight) {
-            hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+        // Hide scroll indicator on scroll
+        if (scrollIndicator) {
+            if (scrolled > 50) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.transition = 'opacity 0.3s ease';
+            } else {
+                scrollIndicator.style.opacity = '1';
+            }
+        }
+
+        // Parallax for content only (fixes overlap bug)
+        if (heroContent && scrolled < 1000) {
+            heroContent.style.transform = `translateY(${scrolled * 0.4}px)`;
+            heroContent.style.opacity = 1 - (scrolled / 700);
         }
     });
 
