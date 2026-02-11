@@ -398,7 +398,7 @@ section {
 
 /* Slide Backgrounds - Local User Photos */
 .slide:nth-child(1) .slide-image {
-    background-image: url('images/slide1.png');
+    background-image: url('images/slide1.jpg');
     background-color: #667eea;
 }
 
@@ -413,7 +413,7 @@ section {
 }
 
 .slide:nth-child(4) .slide-image {
-    background-image: url('images/slide1.png');
+    background-image: url('images/slide1.jpg');
     /* Reuse slide 1 */
     background-color: #f093fb;
 }
