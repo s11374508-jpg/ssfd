@@ -396,29 +396,38 @@ section {
     z-index: 1;
 }
 
-/* Slide Backgrounds - Using image proxy to bypass hotlinking restrictions */
+/* Slide Backgrounds - Local User Photos */
+/* background-size: 105% is used to slightly crop edges (removing watermarks) */
 .slide:nth-child(1) .slide-image {
-    background-image: url('https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/e/ea/Olesko_Castle_Aerial_2019_01.jpg&w=1600&fit=cover');
+    background-image: url('images/slide1.png');
+    background-size: 105% auto;
+    /* Zoom in slightly to hide watermark */
     background-color: #667eea;
 }
 
 .slide:nth-child(2) .slide-image {
-    background-image: url('https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/a/a6/Olesko_Castle_RB.jpg&w=1600&fit=cover');
+    background-image: url('images/slide2.png');
+    background-size: 105% auto;
     background-color: #764ba2;
 }
 
 .slide:nth-child(3) .slide-image {
-    background-image: url('https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/5/55/Olesko_Castle_DPI-0097.jpg&w=1600&fit=cover');
+    background-image: url('images/slide3.png');
+    background-size: 105% auto;
     background-color: #4facfe;
 }
 
 .slide:nth-child(4) .slide-image {
-    background-image: url('https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/c/cb/Olesko_castle.jpg&w=1600&fit=cover');
+    background-image: url('images/slide1.png');
+    /* Reuse slide 1 */
+    background-size: 105% auto;
     background-color: #f093fb;
 }
 
 .slide:nth-child(5) .slide-image {
-    background-image: url('https://images.weserv.nl/?url=upload.wikimedia.org/wikipedia/commons/4/4e/80-391-0291_Olesko.jpg&w=1600&fit=cover');
+    background-image: url('images/slide2.png');
+    /* Reuse slide 2 */
+    background-size: 105% auto;
     background-color: #a8edea;
 }
 
